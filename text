@@ -1,0 +1,29 @@
+
+const session = await mongoose.startSession();
+    session.startTransaction();
+  
+    try {
+
+      const getRole = await Roles.findOne({ slug: "teacher" }).lean();
+      console.log(getRole);
+      const user = new User({
+        name: name,
+        email: email,
+        phone: phone,
+        role: getRole._id,
+        dob: dob,
+        password: bcrypt.hashSync(password, 8),
+        publishedDate: new Date(),
+      });
+  
+
+       console.log(resultInsert2);
+
+       await teacherData.save( { session } );
+       await session.commitTransaction();
+       session.endSession();
+       return resultInsert;
+    } catch (error) {
+        await session.abortTransaction();
+         throw new Error(error);
+     }

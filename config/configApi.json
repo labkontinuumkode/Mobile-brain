@@ -1,0 +1,4 @@
+{
+ "apiPrefix": "/api/v1",
+ "PL_APi_Url": "https://epltable3.s3.eu-west-1.amazonaws.com/epl_table+(1).json"
+}
