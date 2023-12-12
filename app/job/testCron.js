@@ -25,8 +25,7 @@ async function updateOrInsertTeam() {
 async function insertOrUpdateTeamCron() {
     console.log("cron start-------------------------------");
     // Run the updateDatabase function every day at 12:57 AM
-   //const dailyJob = new cron.CronJob('57 0 * * *', updateOrInsertTeam, null, true);
-   const dailyJob = new cron.CronJob('*57 0 * * *',  updateOrInsertTeam, null, true);
+    const dailyJob = new cron.CronJob('*57 0 * * *',  updateOrInsertTeam, null, true);
    console.log("update orinser in every 2 min for testing " )
    dailyJob.start();
 }
