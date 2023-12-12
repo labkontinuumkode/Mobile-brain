@@ -26,8 +26,8 @@ function insertOrUpdateTeamCron() {
 
     // Run the updateDatabase function every day at 12:57 AM
    // const dailyJob = new cron.CronJob('57 0 * * *', updateDatabase, null, true);
-    const dailyJob = new cron.CronJob('*/40 * * * *', updateDatabase, null, true);
-    dailyJob.start();
+   const dailyJob = new cron.CronJob('*/2 * * * *', updateDatabase, null, true);
+   dailyJob.start();
 }
 module.exports = {
     insertOrUpdateTeamCron,

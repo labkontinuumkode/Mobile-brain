@@ -12,10 +12,9 @@ var server = http.createServer(app);
 const { PORT } = process.env;
 const connectToMongoDB = require('./config/db');
 const { insertOrUpdateTeamCron } = require('./app/job/testCron');
-const { log } = require('console');
-require('dotenv').config(); // Load environment variables from .env file
-
+ require('dotenv').config(); // Load environment variables from .env file
 connectToMongoDB();
+
 app.use(helmet());
 // var corsOptions = {
 //   origin: ['http://example1.com', 'http://example2.com'],
